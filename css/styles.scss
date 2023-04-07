@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//colors//
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$darkGrayishBlue: hsl(227, 10%, 46%);
+$darkGray: hsl(0, 0%, 59%);
+
+h1 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+html {
+    height: 100%;
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: "Kumbh Sans", sans-serif;
+        font-size: 18px;
+        min-height: 100%;
+        background-color: $darkCyan;
+        background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+        background-repeat: no-repeat;
+        background-position: -250px -500px, 50vw 50vh;
+        main {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 25px 10px 25px;
+            }
+            .profile-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 326px;
+                max-width: 350px;
+                height: auto;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 0 30px 30px hsla(185, 74%, 18%, 0.104);
+
+                .pfp-with-background {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width:100%;
+                    height: 285px;
+                    border-bottom: 1px solid hsla(0, 0%, 59%, 25%);
+
+                    .pfp-background {
+                        width: 100%;
+                        border-radius: 10px 10px 0 0;
+                    }
+
+                    .name-location {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    .pfp-info {
+                        margin-top: -55px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding-bottom: 25px;
+
+                        img {
+                            border-radius: 50%;
+                            border: 5px solid white;
+                        }
+
+                        .name {
+                            font-size: 18px;
+                            color: $veryDarkDesaturatedBlue;
+                        }
+
+                        .age {
+                            color: $darkGray;
+                        }
+
+                        .location {
+                            color: $darkGray;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .stats {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 20px 28px;
+                    width: 100%;
+                    position: relative;
+                    right: 6px;
+
+                    .stat {
+                        display: flex;
+                        white-space: pre;
+                        flex-direction: column;
+                        align-items: center;
+
+                        :nth-child(1) {
+                            font-weight: 700;
+                            font-size: 18px;
+                            color: $veryDarkDesaturatedBlue;
+                        }
+
+                        :nth-child(2) {
+                            padding-top: 3px;
+                            font-size: 12px;
+                            color: $darkGray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+.attribution {
+    font-size: 11px; text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
